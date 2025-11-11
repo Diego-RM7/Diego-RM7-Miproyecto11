@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entel Diego | Conectando tu mundo</title>
+  <style>
+    /* ===== ESTILOS GENERALES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f8f9ff;
+      color: #1a1a1a;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0033a0;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #ff6f00;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffb703;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, #0033a0 60%, #0077ff);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #ff6f00;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff9100;
+      transform: scale(1.05);
+    }
+
+    /* ===== SECCIONES ===== */
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0033a0;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 280px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #0077ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    /* ===== CONTACTO ===== */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0033a0;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #ffb703;
+      text-decoration: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <div class="logo">Entel Diego</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#planes">Planes</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <h1>Bienvenido a Entel Diego</h1>
+    <p>Conéctate al futuro con la red más rápida, confiable y moderna.  
+      Planes que se adaptan a ti, sin límites.</p>
+    <button class="btn" onclick="document.querySelector('#planes').scrollIntoView({behavior:'smooth'})">
+      Ver Planes
+    </button>
+  </section>
+
+  <!-- ===== PLANES ===== -->
+  <section id="planes">
+    <h2>Planes Destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Plan Smart</h3>
+        <p>3GB de internet + 300 minutos<br><strong>S/ 20</strong></p>
+      </div>
+      <div class="card">
+        <h3>Plan Full</h3>
+        <p>10GB de internet + llamadas ilimitadas<br><strong>S/ 35</strong></p>
+      </div>
+      <div class="card">
+        <h3>Plan Ultra</h3>
+        <p>Internet y minutos ilimitados + roaming<br><strong>S/ 50</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFICIOS ===== -->
+  <section id="beneficios">
+    <h2>Beneficios Exclusivos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Velocidad 5G</h3>
+        <p>Navega hasta 10 veces más rápido con cobertura nacional.</p>
+      </div>
+      <div class="card">
+        <h3>App Entel Diego</h3>
+        <p>Gestiona tu línea, consulta tus megas y recarga fácilmente.</p>
+      </div>
+      <div class="card">
+        <h3>Soporte 24/7</h3>
+        <p>Estamos contigo en todo momento, por chat o teléfono.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form onsubmit="guardarMensaje(event)">
+      <input type="text" id="nombre" placeholder="Tu nombre" required />
+      <input type="email" id="correo" placeholder="Tu correo" required />
+      <textarea id="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Entel Diego — Todos los derechos reservados.</p>
+    <p>Hecho con 💙 por <a href="#">Diego Ruiz</a></p>
+  </footer>
+
+  <script>
+    // Guarda los mensajes de contacto en localStorage
+    function guardarMensaje(e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const correo = document.getElementById("correo").value;
+      const mensaje = document.getElementById("mensaje").value;
+
+      const mensajes = JSON.parse(localStorage.getItem("mensajesEntel")) || [];
+      mensajes.push({ nombre, correo, mensaje, fecha: new Date().toLocaleString() });
+      localStorage.setItem("mensajesEntel", JSON.stringify(mensajes));
+
+      alert("¡Gracias por contactarnos, " + nombre + "! Tu mensaje ha sido guardado.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
